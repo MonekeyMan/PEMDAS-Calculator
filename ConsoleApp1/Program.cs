@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1
+﻿namespace PENDASCalculator
 {
     class Program
     {
@@ -131,8 +131,8 @@
 
         static void Main(string[] args)
         {
-            string[] problems = File.ReadAllLines(@"questions.txt");
-            string[] answers = File.ReadAllLines(@"answers.txt");
+            string[] problems = File.ReadAllLines(@"..\..\..\files\questions.txt");
+            string[] answers = File.ReadAllLines(@"..\..\..\files\answers.txt");
 
             int count = 0;
             int correctCount = 0;
@@ -149,7 +149,7 @@
                     Console.WriteLine("Incorrect " + problems[count] + ": expected " + answers[count] + " | got: " + answer);
                 }
                 count++;
-                Console.WriteLine(count + "| Question: " + problems[count - 1] + " | Answer: " + answer);
+                Console.WriteLine("Question " + count + ": " + problems[count - 1] + " | Answer: " + answer);
             }
 
             Console.WriteLine(correctCount + " out of " + count );
